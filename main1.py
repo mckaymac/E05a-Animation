@@ -53,7 +53,7 @@ class MyGame(arcade.Window):
         """ Called to update our objects. Happens approximately 60 times per second."""
         self.ball.position_x = x
         self.ball.position_y = y
-
+    # Colors ball different color based on which mouse button was clicked
     def on_mouse_press(self, x, y, button, modifiers):
         """
         Called when the user presses a mouse button.
@@ -63,7 +63,7 @@ class MyGame(arcade.Window):
             self.ball.color = arcade.color.BLACK
         if button == arcade.MOUSE_BUTTON_RIGHT:
             self.ball.color = arcade.color.AMARANTH_PINK
-
+    # Returns ball back to Auburn color
     def on_mouse_release(self, x, y, button, modifiers):
         """
         Called when a user releases a mouse button.

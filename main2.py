@@ -6,7 +6,7 @@ python -m arcade.examples.move_keyboard
 """
 
 import arcade
-
+# Initialize variables
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
 SCREEN_TITLE = "Move Keyboard Example"
@@ -24,6 +24,7 @@ class Ball:
         self.radius = radius
         self.color = color
 
+    # Draw a ball based on variables
     def draw(self):
         """ Draw the balls with the instance variables we have. """
         arcade.draw_circle_filled(self.position_x, self.position_y, self.radius, self.color)
@@ -58,6 +59,7 @@ class MyGame(arcade.Window):
         # So we just see our object, not the pointer.
         self.set_mouse_visible(False)
 
+        # Set background color
         arcade.set_background_color(arcade.color.ASH_GREY)
 
         # Create our ball
@@ -94,7 +96,9 @@ class MyGame(arcade.Window):
 
 # Run the code and open the interactive window
 def main():
+    # Build the interactive window with varible's sizes
     window = MyGame(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
+    # Open the window
     arcade.run()
 
 

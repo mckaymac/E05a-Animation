@@ -21,7 +21,7 @@ class Ball:
         self.position_y = position_y
         self.radius = radius
         self.color = color
-
+    # Draw a cirlce with variables
     def draw(self):
         """ Draw the balls with the instance variables we have. """
         arcade.draw_circle_filled(self.position_x, self.position_y, self.radius, self.color)
@@ -49,6 +49,7 @@ class MyGame(arcade.Window):
         arcade.start_render()
         self.ball.draw()
 
+    # Change the ball's x and y to mouse cursors x and y
     def on_mouse_motion(self, x, y, dx, dy):
         """ Called to update our objects. Happens approximately 60 times per second."""
         self.ball.position_x = x
@@ -73,7 +74,7 @@ class MyGame(arcade.Window):
         if button == arcade.MOUSE_BUTTON_RIGHT:
             self.ball.color = arcade.color.AUBURN
 
-
+# Runs the interactive window
 def main():
     window = MyGame(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
     arcade.run()
